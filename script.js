@@ -71,10 +71,41 @@ shirtColor.addEventListener("input", () => {
 });
 
 // Memilih ukuran
+const sizeData = {
+    S: {
+        chest: 47,
+        length: 67
+    },
+    M: {
+        chest: 49,
+        length: 69
+    },
+    L: {
+        chest: 52,
+        length: 72
+    },
+    XL: {
+        chest: 55,
+        length: 75
+    },
+    XXL: {
+        chest: 58,
+        length: 77
+    }
+};
+
+function updateSizeInfo() {
+    const selectedSize = shirtSize.value;
+    const data = sizeData[selectedSize];
+
+    document.getElementById("infoSize").textContent = selectedSize;
+    document.getElementById("infoChest").textContent = data.chest + " cm";
+    document.getElementById("infoLength").textContent = data.length + " cm";
+}
+
 shirtSize.addEventListener("change", () => {
-
     updatePreviewTitle();
-
+    updateSizeInfo();
 });
 
 // Tampilan awal

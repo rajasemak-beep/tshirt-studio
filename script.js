@@ -3,12 +3,25 @@
 const viewButtons = document.querySelectorAll(".buttons button");
 const previewTitle = document.querySelector(".preview h2");
 
-// Elemen kaos
 const shirtBody = document.getElementById("shirtBody");
-// Pemilih warna
 const shirtColor = document.getElementById("shirtColor");
+const shirtSize = document.getElementById("shirtSize");
 
-// Fungsi pergantian tampilan
+// Menyimpan tampilan yang sedang dipilih
+let selectedView = "DEPAN";
+
+// Memperbarui judul preview
+function updatePreviewTitle() {
+    const selectedSize = shirtSize.value;
+
+    previewTitle.textContent =
+        "PREVIEW DESAIN KAOS - " +
+        selectedView +
+        " | UKURAN " +
+        selectedSize;
+}
+
+// Fungsi tombol depan dan belakang
 viewButtons.forEach((button) => {
 
     button.addEventListener("click", () => {
@@ -19,33 +32,28 @@ viewButtons.forEach((button) => {
 
         button.classList.add("active");
 
-        const selectedView = button.textContent.toUpperCase();
+        selectedView = button.textContent.trim().toUpperCase();
 
-        previewTitle.textContent =
-            "PREVIEW DESAIN KAOS - " + selectedView;
-
+        updatePreviewTitle();
     });
 
 });
 
-// Fungsi mengubah warna kaos
+// Fungsi perubahan warna
 shirtColor.addEventListener("input", () => {
 
     shirtBody.setAttribute("fill", shirtColor.value);
 
 });
 
-console.log("T-Shirt Studio berhasil dijalankan!");
-
-// Fungsi memilih ukuran kaos
-const shirtSize = document.getElementById("shirtSize");
-
+// Fungsi pilihan ukuran
 shirtSize.addEventListener("change", () => {
 
-    const selectedSize = shirtSize.value;
-
-    previewTitle.textContent =
-        "PREVIEW DESAIN KAOS - " +
-        selectedSize;
+    updatePreviewTitle();
 
 });
+
+// Judul awal
+updatePreviewTitle();
+
+console.log("T-Shirt Studio berhasil dijalankan!");

@@ -111,5 +111,6 @@ shirtSize.addEventListener("change", () => {
 // Tampilan awal
 updateShirtView();
 updatePreviewTitle();
+updateSizeInfo();
 
 console.log("T-Shirt Studio berhasil dijalankan!");

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>T-Shirt Studio</title>
 
     <link rel="stylesheet" href="style.css">
@@ -17,187 +19,154 @@
 
 <main>
 
+    <!-- AREA PREVIEW -->
     <section class="preview">
+
         <h2>PREVIEW DESAIN KAOS</h2>
 
         <div class="shirt">
+
             <svg viewBox="0 0 300 300">
-                <path
-    id="shirtBody"
-    d="M100 35 L65 50 L20 100 L55 130 L80 105
-    L80 270 L220 270 L220 105 L245 130
-    L280 100 L235 50 L200 35
-    Q150 75 100 35 Z"
-    fill="#f0f0f0"
-    stroke="#b8c0cc"
-    stroke-width="3"/>
 
-                <path
-                    d="M100 35 Q150 90 200 35"
-                    fill="none"
-                    stroke="#b8c0cc"
-                    stroke-width="5"/>
+                <!-- DEPAN -->
+                <g id="shirtFront">
+
+                    <path
+                        id="shirtBodyFront"
+                        d="M110 42 C95 44 80 51 67 60 L28 91 L48 130 L74 113 L79 265 L221 265 L226 113 L252 130 L272 91 L233 60 C220 51 205 44 190 42 C181 63 168 73 150 73 C132 73 119 63 110 42 Z"
+                        fill="#f0f0f0"
+                        stroke="#aeb8c5"
+                        stroke-width="2.5"/>
+
+                    <path
+                        d="M110 42 Q150 91 190 42"
+                        fill="none"
+                        stroke="#9ba7b5"
+                        stroke-width="7"/>
+
+                    <path
+                        d="M110 42 Q150 91 190 42"
+                        fill="none"
+                        stroke="#dce1e8"
+                        stroke-width="2"/>
+
+                    <path
+                        d="M110 48 L76 72 M190 48 L224 72"
+                        fill="none"
+                        stroke="#9ba7b5"
+                        stroke-width="1.5"
+                        stroke-dasharray="3 3"/>
+
+                    <path
+                        d="M48 124 L72 111 M252 124 L228 111"
+                        fill="none"
+                        stroke="#9ba7b5"
+                        stroke-width="2"/>
+
+                    <path
+                        d="M80 255 L220 255"
+                        fill="none"
+                        stroke="#9ba7b5"
+                        stroke-width="1.5"
+                        stroke-dasharray="4 3"/>
+
+                </g>
+
+
+                <!-- BELAKANG -->
+                <g id="shirtBack" style="display:none">
+
+                    <path
+                        id="shirtBodyBack"
+                        d="M110 42 C95 44 80 51 67 60 L28 91 L48 130 L74 113 L79 265 L221 265 L226 113 L252 130 L272 91 L233 60 C220 51 205 44 190 42 C181 51 168 57 150 57 C132 57 119 51 110 42 Z"
+                        fill="#f0f0f0"
+                        stroke="#aeb8c5"
+                        stroke-width="2.5"/>
+
+                    <path
+                        d="M110 42 Q150 70 190 42"
+                        fill="none"
+                        stroke="#9ba7b5"
+                        stroke-width="7"/>
+
+                    <path
+                        d="M110 42 Q150 70 190 42"
+                        fill="none"
+                        stroke="#dce1e8"
+                        stroke-width="2"/>
+
+                    <path
+                        d="M110 48 L76 72 M190 48 L224 72"
+                        fill="none"
+                        stroke="#9ba7b5"
+                        stroke-width="1.5"
+                        stroke-dasharray="3 3"/>
+
+                    <path
+                        d="M48 124 L72 111 M252 124 L228 111"
+                        fill="none"
+                        stroke="#9ba7b5"
+                        stroke-width="2"/>
+
+                    <path
+                        d="M80 255 L220 255"
+                        fill="none"
+                        stroke="#9ba7b5"
+                        stroke-width="1.5"
+                        stroke-dasharray="4 3"/>
+
+                </g>
+
             </svg>
-        <div class="shirt">
 
-    <svg viewBox="0 0 300 300">
+        </div>
 
-        <!-- TAMPAK DEPAN -->
-        <g id="shirtFront">
+        <!-- TOMBOL DEPAN BELAKANG -->
+        <div class="buttons">
 
-            <path
-                id="shirtBodyFront"
-                d="
-                M110 42
-                C95 44 80 51 67 60
-                L28 91
-                L48 130
-                L74 113
-                L79 265
-                L221 265
-                L226 113
-                L252 130
-                L272 91
-                L233 60
-                C220 51 205 44 190 42
-                C181 63 168 73 150 73
-                C132 73 119 63 110 42 Z"
-                fill="#f0f0f0"
-                stroke="#aeb8c5"
-                stroke-width="2.5"/>
+            <button class="active" id="btnFront">
+                Depan
+            </button>
 
-            <!-- Rib kerah depan -->
-            <path
-                d="M110 42 Q150 91 190 42"
-                fill="none"
-                stroke="#9ba7b5"
-                stroke-width="7"/>
+            <button id="btnBack">
+                Belakang
+            </button>
 
-            <path
-                d="M110 42 Q150 91 190 42"
-                fill="none"
-                stroke="#dce1e8"
-                stroke-width="2"/>
+        </div>
 
-            <!-- Jahitan bahu -->
-            <path
-                d="M110 48 L76 72 M190 48 L224 72"
-                fill="none"
-                stroke="#9ba7b5"
-                stroke-width="1.5"
-                stroke-dasharray="3 3"/>
-
-            <!-- Jahitan lengan -->
-            <path
-                d="M48 124 L72 111 M252 124 L228 111"
-                fill="none"
-                stroke="#9ba7b5"
-                stroke-width="2"/>
-
-            <!-- Jahitan bawah -->
-            <path
-                d="M80 255 L220 255"
-                fill="none"
-                stroke="#9ba7b5"
-                stroke-width="1.5"
-                stroke-dasharray="4 3"/>
-
-        </g>
-
-
-        <!-- TAMPAK BELAKANG -->
-        <g id="shirtBack" style="display:none">
-
-            <path
-                id="shirtBodyBack"
-                d="
-                M110 42
-                C95 44 80 51 67 60
-                L28 91
-                L48 130
-                L74 113
-                L79 265
-                L221 265
-                L226 113
-                L252 130
-                L272 91
-                L233 60
-                C220 51 205 44 190 42
-                C181 51 168 57 150 57
-                C132 57 119 51 110 42 Z"
-                fill="#f0f0f0"
-                stroke="#aeb8c5"
-                stroke-width="2.5"/>
-
-            <!-- Rib kerah belakang -->
-            <path
-                d="M110 42 Q150 70 190 42"
-                fill="none"
-                stroke="#9ba7b5"
-                stroke-width="7"/>
-
-            <path
-                d="M110 42 Q150 70 190 42"
-                fill="none"
-                stroke="#dce1e8"
-                stroke-width="2"/>
-
-            <!-- Jahitan bahu -->
-            <path
-                d="M110 48 L76 72 M190 48 L224 72"
-                fill="none"
-                stroke="#9ba7b5"
-                stroke-width="1.5"
-                stroke-dasharray="3 3"/>
-
-            <!-- Jahitan lengan -->
-            <path
-                d="M48 124 L72 111 M252 124 L228 111"
-                fill="none"
-                stroke="#9ba7b5"
-                stroke-width="2"/>
-
-            <!-- Jahitan bawah -->
-            <path
-                d="M80 255 L220 255"
-                fill="none"
-                stroke="#9ba7b5"
-                stroke-width="1.5"
-                stroke-dasharray="4 3"/>
-
-        </g>
-
-    </svg>
-
-</div>
     </section>
 
+
+    <!-- PANEL PENGATURAN -->
     <section class="panel">
-    <h3>Pengaturan Desain</h3>
 
-    <label for="shirtColor">Warna Kaos</label>
+        <h3>Pengaturan Desain</h3>
 
-    <input
-        type="color"
-        id="shirtColor"
-        value="#f0f0f0"
-    >
+        <label for="shirtColor">
+            Warna Kaos
+        </label>
+
+        <input
+            type="color"
+            id="shirtColor"
+            value="#f0f0f0">
+
         <br><br>
 
-<label for="shirtSize">Ukuran Kaos</label>
+        <label for="shirtSize">
+            Ukuran Kaos
+        </label>
 
-<select id="shirtSize">
-    <option value="S">S</option>
-    <option value="M" selected>M</option>
-    <option value="L">L</option>
-    <option value="XL">XL</option>
-    <option value="XXL">XXL</option>
-</select>
-        <p class="coming">
-            Fitur editor desain akan dikembangkan di tahap berikutnya.
-            Nantinya kamu bisa mengatur warna, ukuran, gambar,
-            tulisan, dan posisi desain kaos.
-        </p>
+        <select id="shirtSize">
+
+            <option value="S">S</option>
+            <option value="M" selected>M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+
+        </select>
+
     </section>
 
 </main>

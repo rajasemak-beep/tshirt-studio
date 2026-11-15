@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #101522;
+    color: white;
+}
+
+header {
+    padding: 20px;
+    background: #192235;
+    border-bottom: 1px solid #303b50;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 23px;
+    color: #55aaff;
+}
+
+header p {
+    margin: 6px 0 0;
+    color: #aab5c8;
+    font-size: 13px;
+}
+
+main {
+    padding: 18px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.preview {
+    background: #202c40;
+    border-radius: 18px;
+    padding: 20px;
+    text-align: center;
+}
+
+.preview h2 {
+    font-size: 17px;
+    margin-top: 0;
+}
+
+.shirt {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    margin: auto;
+}
+
+.shirt svg {
+    width: 100%;
+    height: 100%;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 9px;
+    background: #35445e;
+    color: white;
+    font-size: 14px;
+}
+
+button.active {
+    background: #278be5;
+}
+
+.panel {
+    background: #202c40;
+    padding: 18px;
+    margin-top: 18px;
+    border-radius: 18px;
+}
+
+.panel h3 {
+    margin-top: 0;
+    font-size: 16px;
+}
+
+.coming {
+    color: #aab5c8;
+    font-size: 13px;
+    line-height: 1.6;
+}

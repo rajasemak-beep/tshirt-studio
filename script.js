@@ -36,3 +36,16 @@ shirtColor.addEventListener("input", () => {
 });
 
 console.log("T-Shirt Studio berhasil dijalankan!");
+
+// Fungsi memilih ukuran kaos
+const shirtSize = document.getElementById("shirtSize");
+
+shirtSize.addEventListener("change", () => {
+
+    const selectedSize = shirtSize.value;
+
+    previewTitle.textContent =
+        "PREVIEW DESAIN KAOS - " +
+        selectedSize;
+
+});

@@ -130,12 +130,13 @@ function updateSizeInfo() {
     document.getElementById("infoSize").textContent = selectedSize;
     document.getElementById("infoChest").textContent = data.chest + " cm";
     document.getElementById("infoLength").textContent = data.length + " cm";
-
     document.getElementById("infoShoulder").textContent = data.shoulder + " cm";
     document.getElementById("infoSleeveLength").textContent = data.sleeveLength + " cm";
     document.getElementById("infoSleeveOpening").textContent = data.sleeveOpening + " cm";
     document.getElementById("infoBottom").textContent = data.bottom + " cm";
     document.getElementById("infoCollar").textContent = data.collar + " cm";
+    document.getElementById("patternWidth").textContent = (data.chest / 2) + " cm";
+document.getElementById("patternLength").textContent = data.length + " cm";
 }
 
 shirtSize.addEventListener("change", () => {

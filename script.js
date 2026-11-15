@@ -74,23 +74,52 @@ shirtColor.addEventListener("input", () => {
 const sizeData = {
     S: {
         chest: 47,
-        length: 67
+        length: 67,
+        shoulder: 42,
+        sleeveLength: 19,
+        sleeveOpening: 16,
+        bottom: 47,
+        collar: 18
     },
+
     M: {
         chest: 49,
-        length: 69
+        length: 69,
+        shoulder: 44,
+        sleeveLength: 20,
+        sleeveOpening: 17,
+        bottom: 49,
+        collar: 18.5
     },
+
     L: {
         chest: 52,
-        length: 72
+        length: 72,
+        shoulder: 46,
+        sleeveLength: 21,
+        sleeveOpening: 18,
+        bottom: 52,
+        collar: 19
     },
+
     XL: {
         chest: 55,
-        length: 75
+        length: 75,
+        shoulder: 48,
+        sleeveLength: 22,
+        sleeveOpening: 19,
+        bottom: 55,
+        collar: 19.5
     },
+
     XXL: {
         chest: 58,
-        length: 77
+        length: 77,
+        shoulder: 50,
+        sleeveLength: 23,
+        sleeveOpening: 20,
+        bottom: 58,
+        collar: 20
     }
 };
 

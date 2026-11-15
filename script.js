@@ -4,8 +4,7 @@ const viewButtons = document.querySelectorAll(".buttons button");
 const previewTitle = document.querySelector(".preview h2");
 
 // Elemen kaos
-const shirtBody = document.querySelector(".shirt svg path:first-child");
-
+const shirtBody = document.getElementById("shirtBody");
 // Pemilih warna
 const shirtColor = document.getElementById("shirtColor");
 
